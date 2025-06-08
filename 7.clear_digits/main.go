@@ -14,12 +14,8 @@ func main() {
 func clearDigits(s string) string {
 	stack := []rune{}
 
-	if len(s) == 1 {
-		return ""
-	}
-
 	for _, i := range s {
-		if i >= '0' && i < '9' {
+		if i >= '0' && i <= '9' {
 			if len(stack) > 0 {
 				stack = stack[:len(stack)-1]
 			}
